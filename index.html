@@ -228,11 +228,12 @@
             }
         }
       ])
-      liff.closeWindow()
+//       liff.closeWindow()
     }
     main()
 
   function text2date(date) {
+    var thMonth = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'];
     var showdate = date.getDate() + ' ' + (thMonth[date.getMonth()])
       + ' ' + (date.getFullYear() - 1957)
       + ' - ' + date.getHours() + ':' + ('0' + date.getMinutes()).slice(-2) + ' น.';
