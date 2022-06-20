@@ -4,10 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
   <title>v2</title>
-  <style>
-    body { padding: 256px }
-    button { display: none; width: 50%; padding: 16px 0; margin: 16px auto }
-  </style>
 </head>
 <body>
   <button id="btnShare" onclick="sendShare()">Share Target Picker</button>
@@ -21,7 +17,7 @@
     async function sendShare() {
       const result = await liff.shareTargetPicker([
         {
-          "type": "flex",
+          'type': 'flex',
           "altText": "Flex Message",
           "contents": {
             "type": "bubble",
