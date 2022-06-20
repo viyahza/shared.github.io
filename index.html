@@ -11,7 +11,9 @@
   <script src='https://static.line-scdn.net/liff/edge/2.5.0/sdk.js'></script>
   <script>
     const queryString = window.location.search.slice(1);
+    alert(queryString);
     const data = queryString.split(',');
+    alert(data);
 
     async function main() {
       await liff.init({ liffId: '1657236240-AXK6lOrm' })
@@ -40,7 +42,7 @@
                       },
                       {
                         'type': 'text',
-                        'text': '#' + data[0],
+                        'text': '#' + 'data[0]',
                         'align': 'end',
                         'color': '#aaaaaa'
                       }
@@ -48,7 +50,7 @@
                   },
                   {
                     'type': 'text',
-                    'text': data[3],
+                    'text': 'data[3]',
                     'weight': 'bold',
                     'size': 'xl',
                     'margin': 'xs'
@@ -69,7 +71,7 @@
                           },
                           {
                             'type': 'text',
-                            'text': data[2],
+                            'text': 'data[2]',
                             'align': 'end'
                           }
                         ]
@@ -86,7 +88,7 @@
                           },
                           {
                             'type': 'text',
-                            'text': '0' + data[8],
+                            'text': '0' + 'ata[8]',
                             'align': 'end'
                           }
                         ],
@@ -94,7 +96,7 @@
                         'action': {
                           'type': 'message',
                           'label': 'action',
-                          'text': '0' + data[8]
+                          'text': '0' + 'data[8]'
                         }
                       },
                       {
@@ -109,7 +111,7 @@
                           },
                           {
                             'type': 'text',
-                            'text': data[5],
+                            'text': 'data[5]',
                             'align': 'end'
                           }
                         ],
@@ -117,7 +119,7 @@
                         'action': {
                           'type': 'uri',
                           'label': 'action',
-                          'uri': 'https://maps.google.com?q=' + data[6] + ',' + data[7]
+                          'uri': 'https://maps.google.com?q=' + 'data[6]' + ',' + 'data[7]'
                         }
                       }
                     ],
@@ -144,7 +146,7 @@
                           },
                           {
                             'type': 'text',
-                            'text': text2date(data[9]),
+                            'text': 'text2date(data[9])',
                             'align': 'end'
                           }
                         ]
@@ -155,7 +157,7 @@
                         'contents': [
                           {
                             'type': 'image',
-                            'url': 'https://lh3.googleusercontent.com/d/' + data[4] + '=w280?authuser=0',
+                            'url': 'https://lh3.googleusercontent.com/d/' + 'data[4]' + '=w280?authuser=0',
                             'size': 'full',
                             'aspectMode': 'cover',
                             'aspectRatio': '1.5:1'
@@ -165,7 +167,7 @@
                         'action': {
                           'type': 'uri',
                           'label': 'action',
-                          'uri': 'https://lh3.googleusercontent.com/d/' + data[4] + '=w1280?authuser=0'
+                          'uri': 'https://lh3.googleusercontent.com/d/' + 'data[4]' + '=w1280?authuser=0'
                         }
                       },
                     ],
@@ -192,8 +194,8 @@
                         'action': {
                           'type': 'postback',
                           'label': 'รับเรื่อง',
-                          'displayText': 'รับเรื่องเรียบร้อย #' + (data[0] - 1),
-                          'data': data[0] + ',รับเรื่อง'
+                          'displayText': 'รับเรื่องเรียบร้อย #' + '(data[0] - 1)',
+                          'data': 'data[0]' + ',รับเรื่อง'
                         },
                         'style': 'primary',
                         'height': 'sm',
