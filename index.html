@@ -1,9 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Example</title>
-    </head>
-    <body>
-        <p>This is an example of a simple HTML page with one paragraph.</p>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <title>My LIFF App</title>
+</head>
+<body>
+  <script src="https://static.line-scdn.net/liff/edge/2.5.0/sdk.js"></script>
+  <script>
+    async function main() {
+      await liff.init({ liffId: "1657234496-bJWNPRva" })
+      await liff.shareTargetPicker([
+
+        {
+          "type": "flex",
+          "altText": "แจ้งเตือน",
+          "contents": {
+            'type': 'bubble',
+            'body': {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [{
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [{
+                  "type": "text",
+                  "text": "ระบบรับเรื่องอัตโนมัติ",
+                  "color": "#1DB446",
+                  "weight": "bold",
+                  "flex": 0
+                }, {
+                  "type": "text",
+                  "text": "#" + data0,
+                  "align": "end",
+                  "color": "#aaaaaa"
+                }]
+              }]
+            }
+          }
+        }
+
+      ])
+      liff.closeWindow()
+    }
+    main()
+  </script>
+</body>
 </html>
