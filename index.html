@@ -144,14 +144,14 @@
       await liff.init({ liffId: "1657236240-AXK6lOrm" })
       sendShare()
       
-//       if (liff.isLoggedIn()) {
-//         document.getElementById("btnShare").style.display = "block"
-//         if (!liff.isInClient()) {
-//           document.getElementById("btnLogOut").style.display = "block"
-//         }
-//       } else {
-//         document.getElementById("btnLogin").style.display = "block"
-//       }
+      if (liff.isLoggedIn()) {
+        document.getElementById("btnShare").style.display = "block"
+        if (!liff.isInClient()) {
+          document.getElementById("btnLogOut").style.display = "block"
+        }
+      } else {
+        document.getElementById("btnLogin").style.display = "block"
+      }
     }
     main()
   </script>
