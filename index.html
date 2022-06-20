@@ -4,7 +4,7 @@
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover'>
-  <title>v2</title>
+  <title>v3</title>
 </head>
 
 <body>
@@ -13,7 +13,7 @@
     const queryString = window.location.search.slice(1);
     alert(queryString);
     const data = queryString.split(',');
-    alert(data);
+    alert(data[0]);
 
     async function main() {
       await liff.init({ liffId: '1657236240-AXK6lOrm' })
