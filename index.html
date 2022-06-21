@@ -24,9 +24,10 @@
     }
 
     async function sendShared() {
-      const myurl = decodeURIComponent(window.location.search.slice(1)).replace(/\+/g, ' ')
-//       const query = (myurl).replace(/\+/g, ' ')
-//       const data = decodeURI(query).split(',');
+      const myurl = decodeURI(window.location.search.slice(1))
+      alert(myurl)
+      const query = myurl.replace(/\+/g, ' ')
+      alert(query)
       const data = myurl.split(',')
       
 
