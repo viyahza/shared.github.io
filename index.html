@@ -36,106 +36,191 @@
         {
           "type": "flex",
           "altText": "Flex Message",
-          "contents": {
-            "type": "bubble",
-            "body": {
-              "type": "box",
-              "layout": "vertical",
-              "spacing": "md",
-              "contents": [
-                {
-                  "type": "text",
-                  "text": "BROWN'S ADVENTURE",
-                  "size": "xl",
-                  "gravity": "center",
-                  "weight": "bold",
-                  "wrap": true
-                },
-                {
-                  "type": "box",
-                  "layout": "vertical",
-                  "spacing": "sm",
-                  "margin": "lg",
-                  "contents": [
-                    {
-                      "type": "box",
-                      "layout": "baseline",
-                      "spacing": "sm",
-                      "contents": [
-                        {
-                          "type": "text",
-                          "text": "Date",
-                          "flex": 1,
-                          "size": "sm",
-                          "color": "#AAAAAA"
-                        },
-                        {
-                          "type": "text",
-                          "text": "Monday 25, 9:00PM",
-                          "flex": 4,
-                          "size": "sm",
-                          "color": "#666666",
-                          "wrap": true
-                        }
-                      ]
-                    },
-                    {
-                      "type": "box",
-                      "layout": "baseline",
-                      "spacing": "sm",
-                      "contents": [
-                        {
-                          "type": "text",
-                          "text": "Place",
-                          "flex": 1,
-                          "size": "sm",
-                          "color": "#AAAAAA"
-                        },
-                        {
-                          "type": "text",
-                          "text": "LINE Thailand",
-                          "flex": 4,
-                          "size": "sm",
-                          "color": "#666666",
-                          "wrap": true
-                        }
-                      ]
-                    },
-                    {
-                      "type": "box",
-                      "layout": "vertical",
-                      "margin": "xxl",
-                      "contents": [
-                        {
-                          "type": "spacer"
-                        },
-                        {
-                          "type": "image",
-                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/linecorp_code_withborder.png",
-                          "size": "xl",
-                          "aspectMode": "cover"
-                        },
-                        {
-                          "type": "text",
-                          "text": "You can enter the theater by using this code instead of a ticket",
-                          "margin": "xxl",
-                          "size": "xs",
-                          "color": "#AAAAAA",
-                          "wrap": true
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          }
+          "contents": 
+          
+          
+          
+          {
+  "type": "bubble",
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [{
+      "type": "box",
+      "layout": "horizontal",
+      "contents": [{
+        "type": "text",
+        "text": "ระบบรับเรื่องอัตโนมัติ",
+        "color": "#1DB446",
+        "weight": "bold",
+        "flex": 0
+      }, {
+        "type": "text",
+        "text": "#1",
+        "align": "end",
+        "color": "#aaaaaa"
+      }
+      ]
+    }, {
+      "type": "text",
+      "text": "ปัญหาไฟติดๆดับๆ",
+      "weight": "bold",
+      "size": "xl",
+      "margin": "xs"
+    }, {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [{
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [{
+          "type": "text",
+          "text": "ผู้แจ้ง",
+          "flex": 0,
+          "color": "#555555"
+        }, {
+          "type": "text",
+          "text": "VB.Freedays",
+          "align": "end"
         }
-        
-        
-        
-        
-        
+        ]
+      }, {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [{
+          "type": "text",
+          "text": "โทรศัพท์",
+          "flex": 0,
+          "color": "#555555"
+        }, {
+          "type": "text",
+          "text": "0123456789",
+          "align": "end"
+        }
+        ],
+        "margin": "sm",
+        "action": {
+          "type": "message",
+          "label": "action",
+          "text": "0123456789"
+        }
+      }, {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [{
+          "type": "text",
+          "text": "สถานที่",
+          "flex": 0,
+          "color": "#555555"
+        }, {
+          "type": "text",
+          "text": "ต.ปากแคว อ.เมือง",
+          "align": "end"
+        }
+        ],
+        "margin": "sm",
+        "action": {
+          "type": "uri",
+          "label": "action",
+          "uri": "https://maps.google.com?q=17.023813,99.830786"
+        }
+      }
+      ],
+      "margin": "xs"
+    }, {
+      "type": "separator",
+      "margin": "sm"
+    }, {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [{
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [{
+          "type": "text",
+          "text": "วันที่แจ้ง",
+          "flex": 0,
+          "color": "#1DB446",
+          "weight": "bold"
+        }, {
+          "type": "text",
+          "text": "21 มิ.ย. 65 - 13:55 น.",
+          "align": "end"
+        }
+        ]
+      }, {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [{
+          "type": "image",
+          "url": "https://lh3.googleusercontent.com/d/1JCnmyAgIml-55VkV7TcbeOlTR9AH88NC=w280?authuser=0",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "1.5:1"
+        }
+        ],
+        "margin": "sm",
+        "action": {
+          "type": "uri",
+          "label": "action",
+          "uri": "https://drive.google.com/thumbnail?authuser=0&sz=w1280&id=1JCnmyAgIml-55VkV7TcbeOlTR9AH88NC"
+        }
+      }
+      ],
+      "margin": "md"
+    }, {
+      "type": "box",
+      "layout": "vertical",
+      "contents": []
+    }
+    ],
+    "paddingAll": "xl"
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [{
+      "type": "box",
+      "layout": "horizontal",
+      "contents": [{
+        "type": "button",
+        "action": {
+          "type": "postback",
+          "label": "รับทราบปัญหา",
+          "displayText": "รับเรื่องเรียบร้อย #1",
+          "data": "2,รับเรื่อง"
+        },
+        "style": "primary",
+        "height": "sm",
+        "flex": 20
+      }, {
+        "type": "filler",
+        "flex": 1
+      }, {
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "ส่งต่อ",
+          "uri": "https://liff.line.me/1657234496-bJWNPRva"
+        },
+        "style": "primary",
+        "height": "sm",
+        "flex": 20
+      }
+      ]
+    }
+    ]
+  },
+  "styles": {
+    "footer": {
+      "separator": true
+    }
+  }
+}
+          
+          
+        }
+       
       ])
       liff.closeWindow()
     }
