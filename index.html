@@ -14,7 +14,7 @@
     const data = queryString.split(',');
     
     async function main() {
-      alert('main');
+      alert(liff.isLoggedIn());
       await liff.init({ liffId: "1657236240-AXK6lOrm" })
       if (liff.isLoggedIn()) {
         sendShare()
