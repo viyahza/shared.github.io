@@ -25,7 +25,7 @@
 
     async function sendShared() {
       const query = window.location.search.slice(1);
-      const data = query.split(',');
+      const data = decodeURI(query.split(','));
 
       await liff.shareTargetPicker([
         
