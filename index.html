@@ -11,12 +11,18 @@
   <script src='https://static.line-scdn.net/liff/edge/2.5.0/sdk.js'></script>
   <script>
     const queryString = window.location.search.slice(1);
-    alert(queryString);
     const data = queryString.split(',');
-    alert(data[0]);
-
+    
     async function main() {
-      await liff.init({ liffId: '1657236240-AXK6lOrm' })
+      await liff.init({ liffId: "1657236240-AXK6lOrm" })
+      if (liff.isLoggedIn()) {
+        sendShare()
+      } else {
+        liff.login()
+      }
+    }
+
+    async function sendShared() {
       await liff.shareTargetPicker([
         {
           'type': 'flex',
