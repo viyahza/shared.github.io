@@ -4,7 +4,7 @@
 <head>
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover'>
-  <title>v4</title>
+  <title>v5</title>
 </head>
 
 <body>
@@ -24,8 +24,9 @@
     }
 
     async function sendShared() {
-      const query = decodeURIComponent(window.location.search).slice(1);
-      const data = decodeURI(query).split(',');
+      const query = decodeURIComponent(window.location.search.replace('+', ' ')).slice(1);
+//       const data = decodeURI(query).split(',');
+      const data = query.split(',');
       
 
       await liff.shareTargetPicker([
