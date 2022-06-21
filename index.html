@@ -16,14 +16,14 @@
     async function main() {
       await liff.init({ liffId: '1657236240-AXK6lOrm' })
       if (liff.isInClient()) {
-        alert('isInClient');
+//         alert('isInClient');
         sendShared()
       } else {
         if (liff.isLoggedIn()) {
-          alert('isLoggedIn');
+//           alert('isLoggedIn');
           sendShared()
         } else {
-          alert('login');
+//           alert('login');
           liff.login()
         }
       }
@@ -42,14 +42,7 @@
       liff.closeWindow()
     }
     main()
-    
-    function text2date(date) {
-      var showdate = date.getDate() + ' ' + (thMonth[date.getMonth()])
-        + ' ' + (date.getFullYear() - 1957)
-        + ' - ' + date.getHours() + ':' + ('0' + date.getMinutes()).slice(-2) + ' น.';
-      return showdate
-    }
-    
+
   </script>
 </body>
 
