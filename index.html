@@ -37,14 +37,246 @@
           'altText': 'Flex Message',
           'contents': 
           
+{
+  "type": "bubble",
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
           {
+            "type": "text",
+            "text": "ระบบรับเรื่องอัตโนมัติ",
+            "color": "#1DB446",
+            "weight": "bold",
+            "flex": 0
+          },
+          {
+            "type": "text",
+            "text": "#1",
+            "align": "end",
+            "color": "#aaaaaa"
           }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "ไฟติดๆดับๆ",
+        "weight": "bold",
+        "size": "xl"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "text",
+                "text": "ผู้แจ้ง",
+                "flex": 0,
+                "color": "#555555"
+              },
+              {
+                "type": "text",
+                "text": "เราเอง",
+                "align": "end"
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "text",
+                "text": "โทรศัพท์",
+                "flex": 0,
+                "color": "#555555"
+              },
+              {
+                "type": "text",
+                "text": "0123456789",
+                "align": "end"
+              }
+            ],
+            "margin": "sm"
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "text",
+                "text": "สถานที่",
+                "flex": 0,
+                "color": "#555555"
+              },
+              {
+                "type": "text",
+                "text": "ต.ธานี อ.เมือง",
+                "align": "end"
+              }
+            ],
+            "margin": "sm",
+            "action": {
+              "type": "uri",
+              "label": "action",
+              "uri": "http://linecorp.com/"
+            }
+          }
+        ]
+      },
+      {
+        "type": "separator",
+        "margin": "sm"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "text",
+                "text": "วันที่แจ้ง",
+                "flex": 0,
+                "color": "#1DB446",
+                "weight": "bold"
+              },
+              {
+                "type": "text",
+                "text": "14 มิ.ย. 65 - 22:00 น.",
+                "color": "#111111",
+                "align": "end"
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "image",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+                "size": "full",
+                "aspectMode": "cover",
+                "aspectRatio": "1.5:1"
+              }
+            ],
+            "margin": "sm"
+          },
+          {
+            "type": "separator",
+            "margin": "lg"
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "text",
+                "text": "รับเรื่อง",
+                "color": "#1DB446",
+                "flex": 0,
+                "weight": "bold"
+              },
+              {
+                "type": "text",
+                "text": "14 มิ.ย. 65 - 22:12 น.",
+                "size": "sm",
+                "align": "end"
+              }
+            ],
+            "margin": "md"
+          },
+          {
+            "type": "separator",
+            "margin": "sm"
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "text",
+                "text": "แล้วเสร็จ",
+                "color": "#1DB446",
+                "weight": "bold",
+                "flex": 0
+              },
+              {
+                "type": "text",
+                "text": "14 มิ.ย. 65 - 22:22 น.",
+                "color": "#111111",
+                "align": "end"
+              }
+            ],
+            "margin": "md"
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "image",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+                "aspectRatio": "1.5:1",
+                "aspectMode": "cover",
+                "size": "full"
+              }
+            ],
+            "margin": "sm"
+          }
+        ],
+        "margin": "md"
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "ติดตามงาน",
+          "uri": "http://linecorp.com/"
+        },
+        "color": "#1DB446",
+        "style": "primary",
+        "height": "sm"
+      }
+    ]
+  },
+  "styles": {
+    "footer": {
+      "separator": true
+    }
+  }
+}
           
         }
       ])
       liff.closeWindow()
     }
     main()
+    
+    function text2date(date) {
+      var showdate = date.getDate() + ' ' + (thMonth[date.getMonth()])
+        + ' ' + (date.getFullYear() - 1957)
+        + ' - ' + date.getHours() + ':' + ('0' + date.getMinutes()).slice(-2) + ' น.';
+      return showdate
+    }
+    
   </script>
 </body>
 
