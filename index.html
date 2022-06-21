@@ -16,29 +16,25 @@
     async function main() {
       await liff.init({ liffId: '1657236240-AXK6lOrm' })
       if (liff.isInClient()) {
-//         alert('isInClient');
         sendShared()
       } else {
         if (liff.isLoggedIn()) {
-//           alert('isLoggedIn');
           sendShared()
         } else {
-//           alert('login');
           liff.login()
         }
       }
     }
 
     async function sendShared() {
-      alert('sendShared');
+//       alert('sendShared');
       await liff.shareTargetPicker([
- 
-        {
+         {
           "type": "flex",
           "altText": "Flex Message",
           "contents":
 
-         {
+{
   "type": "bubble",
   "body": {
     "type": "box",
@@ -72,6 +68,49 @@
       }
     ],
     "paddingAll": "xl"
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "action",
+              "uri": "http://linecorp.com/"
+            },
+            "height": "sm",
+            "style": "primary",
+            "flex": 60
+          },
+          {
+            "type": "filler",
+            "flex": 2
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "action",
+              "uri": "http://linecorp.com/"
+            },
+            "height": "sm",
+            "style": "primary",
+            "flex": 60
+          }
+        ]
+      }
+    ]
+  },
+  "styles": {
+    "footer": {
+      "separator": true
+    }
   }
 }
 
@@ -81,7 +120,6 @@
       liff.closeWindow()
     }
     main()
-
   </script>
 </body>
 
