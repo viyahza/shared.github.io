@@ -4,7 +4,7 @@
 <head>
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover'>
-  <title>v6</title>
+  <title>v7</title>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
 
     async function sendShared() {
       const myurl = window.location.search.slice(1)
-      const query = decodeURIComponent(myurl.replace('+', ' '));
+      const query = decodeURIComponent(myurl.replace('+', '%20'))
 //       const data = decodeURI(query).split(',');
       const data = query.split(',')
       
