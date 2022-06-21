@@ -4,7 +4,7 @@
 <head>
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover'>
-  <title>v13</title>
+  <title>v14</title>
 </head>
 
 <body>
@@ -30,135 +30,58 @@
     }
 
     async function sendShared() {
-//       alert('sendShared');
+      alert('sendShared');
       await liff.shareTargetPicker([
  
         {
           "type": "flex",
           "altText": "Flex Message",
-          "contents": 
-          
-          
-         {
-  "type": "bubble",
-  "body": {
-    "type": "box",
-    "layout": "vertical",
-    "contents": [
-      {
-        "type": "box",
-        "layout": "horizontal",
-        "contents": [
+          "contents":
+
           {
-            "type": "text",
-            "text": "ระบบรับเรื่องอัตโนมัติ",
-            "color": "#1DB446",
-            "weight": "bold",
-            "flex": 0
-          },
-          {
-            "type": "text",
-            "text": "#1",
-            "align": "end",
-            "color": "#aaaaaa"
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "text": "ปัญหาไฟติดๆดับๆ",
-        "weight": "bold",
-        "size": "xl",
-        "margin": "xs"
-      },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "box",
-            "layout": "horizontal",
-            "contents": [
-              {
-                "type": "text",
-                "text": "ผู้แจ้ง",
-                "flex": 0,
-                "color": "#555555"
-              },
-              {
-                "type": "text",
-                "text": "VB.Freedays",
-                "align": "end"
-              }
-            ]
-          },
-          {
-            "type": "box",
-            "layout": "horizontal",
-            "contents": [
-              {
-                "type": "text",
-                "text": "โทรศัพท์",
-                "flex": 0,
-                "color": "#555555"
-              },
-              {
-                "type": "text",
-                "text": "0123456789",
-                "align": "end"
-              }
-            ],
-            "margin": "sm",
-            "action": {
-              "type": "message",
-              "label": "action",
-              "text": "0123456789"
-            }
-          },
-          {
-            "type": "box",
-            "layout": "horizontal",
-            "contents": [
-              {
-                "type": "text",
-                "text": "สถานที่",
-                "flex": 0,
-                "color": "#555555"
-              },
-              {
-                "type": "text",
-                "text": "ต.ปากแคว อ.เมือง",
-                "align": "end"
-              }
-            ],
-            "margin": "sm",
-            "action": {
-              "type": "uri",
-              "label": "action",
-              "uri": "https://maps.google.com?q=17.023813,99.830786"
+            "type": "bubble",
+            "body": {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "horizontal",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "ระบบรับเรื่องอัตโนมัติ",
+                      "color": "#1DB446",
+                      "weight": "bold",
+                      "flex": 0
+                    },
+                    {
+                      "type": "text",
+                      "text": "#1",
+                      "align": "end",
+                      "color": "#aaaaaa"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "ปัญหาไฟติดๆดับๆ",
+                  "weight": "bold",
+                  "size": "xl",
+                  "margin": "xs"
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": []
+                }
+              ],
+              "paddingAll": "xl"
             }
           }
-        ],
-        "margin": "xs"
-      },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "contents": []
-      }
-    ],
-    "paddingAll": "xl"
-  },
-  "styles": {
-    "footer": {
-      "separator": true
-    }
-  }
-}
-          
-          
+
+
         }
-       
       ])
       liff.closeWindow()
     }
