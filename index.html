@@ -4,7 +4,7 @@
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover'>
-  <title>v4</title>
+  <title>v5</title>
 </head>
 
 <body>
@@ -14,6 +14,7 @@
     const data = queryString.split(',');
     
     async function main() {
+      alert('main');
       await liff.init({ liffId: "1657236240-AXK6lOrm" })
       if (liff.isLoggedIn()) {
         sendShare()
@@ -23,6 +24,7 @@
     }
 
     async function sendShared() {
+      alert('sendShared');
       await liff.shareTargetPicker([
         {
           'type': 'flex',
@@ -35,7 +37,6 @@
           
         }
       ])
-      alert('mine');
       liff.closeWindow()
     }
     main()
