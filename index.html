@@ -24,9 +24,10 @@
     }
 
     async function sendShared() {
-      const myurl = decodeURIComponent(window.location.search.slice(1))
-      const query = myurl.replace(/\+/g, ' ')
+      const myurl = window.location.search.slice(1)
+      const query = decodeURIComponent(myurl).replace(/\+/g, ' ')
       const data = query.split(',')
+      alert(data)
 
       await liff.shareTargetPicker([
         
@@ -221,7 +222,7 @@
                       'action': {
                         'type': 'uri',
                         'label': 'ส่งต่อ',
-                        'uri': 'https://liff.line.me/1657236240-AXK6lOrm/?' + query
+                        'uri': 'https://liff.line.me/1657236240-AXK6lOrm/?' + myurl
                       },
                       'style': 'primary',
                       'height': 'sm',
