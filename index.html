@@ -15,11 +15,17 @@
     
     async function main() {
       await liff.init({ liffId: "1657236240-AXK6lOrm" })
-      alert(liff.isLoggedIn());
-      if (liff.isLoggedIn()) {
-        sendShare()
+      if (liff.isInClient()) {
+        alert(liff.isInClient())
+        sendShared()
       } else {
-        liff.login()
+        if (liff.isLoggedIn()) {
+          alert(liff.isLoggedIn())
+          sendShared()
+        } else {
+          alert(liff.login())
+          liff.login()
+        }
       }
     }
 
