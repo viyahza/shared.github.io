@@ -4,7 +4,7 @@
 <head>
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover'>
-  <title>v11</title>
+  <title>v1</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
       const myurl = window.location.search.slice(1)
       const query = decodeURIComponent(myurl).replace(/\+/g, ' ')
       const data = query.split(',')
-      alert(data)
+//       alert(data)
 
       await liff.shareTargetPicker([
         
@@ -205,9 +205,9 @@
                     {
                       'type': 'button',
                       'action': {
-                        'type': 'uri',
-                        'label': 'รับเรื่อง',
-                        'uri': 'http://linecorp.com/'
+                        'type': 'message',
+                        'label': 'action',
+                        'text': 'hello'
                       },
                       'style': 'primary',
                       'height': 'sm',
