@@ -25,9 +25,7 @@
 
     async function sendShared() {
       const myurl = window.location.search.slice(1)
-      alert(myurl)
       const query = decodeURIComponent(myurl).replace(/\+/g, ' ')
-      alert(query)
       const data = query.split(',')
       alert(data[0])
 
@@ -104,16 +102,15 @@
                         {
                           'type': 'text',
                           'text': '0' + data[8],
-                          'align': 'end'
+                          'align': 'end',
+                          'action': {
+                            'type': 'uri',
+                            'uri': 'tel:0' + data[8]
+                          }
                         }
                       ],
-                      'margin': 'sm',
-                      'action': {
-                        'type': 'uri',
-                        'label': 'action',
-                        'uri': 'tel:0' + data[8]
-                      }
-                    },
+                      'margin': 'sm'
+                     },
                     {
                       'type': 'box',
                       'layout': 'horizontal',
@@ -127,15 +124,15 @@
                         {
                           'type': 'text',
                           'text': data[5],
-                          'align': 'end'
+                          'align': 'end',
+                          'action': {
+                            'type': 'uri',
+                            'label': 'action',
+                            'uri': 'https://maps.google.com?q=' + data[6] + ',' + data[7]
+                          }
                         }
                       ],
-                      'margin': 'sm',
-                      'action': {
-                        'type': 'uri',
-                        'label': 'action',
-                        'uri': 'https://maps.google.com?q=' + data[6] + ',' + data[7]
-                      }
+                      'margin': 'sm'
                     }
                   ],
                   'margin': 'xs'
