@@ -27,7 +27,7 @@
       const myurl = window.location.search.slice(1)
       const query = decodeURIComponent(myurl).replace(/\+/g, ' ')
       const data = query.split(',')
-      alert(data[0])
+      // alert(data[0])
 
       await liff.shareTargetPicker([
         
@@ -204,9 +204,9 @@
                     {
                       'type': 'button',
                       'action': {
-                        'type': 'message',
-                        'label': 'action',
-                        'text': 'hello'
+                        'type': 'uri',
+                        'label': 'ส่งต่อ',
+                        'uri': 'https://liff.line.me/1657236240-AXK6lOrm/?'
                       },
                       'style': 'primary',
                       'height': 'sm',
