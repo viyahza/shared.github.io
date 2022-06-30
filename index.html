@@ -30,7 +30,7 @@
       // alert(data[0])
 
       await liff.shareTargetPicker([
-        
+
         {
           "type": "flex",
           "altText": "Flex Message",
@@ -41,6 +41,7 @@
             'body': {
               'type': 'box',
               'layout': 'vertical',
+              'paddingAll': 'xl',
               'contents': [
                 {
                   'type': 'box',
@@ -55,7 +56,7 @@
                     },
                     {
                       'type': 'text',
-                      'text': '#' + data[0],
+                      'text': '#' + (data[14] - 1),
                       'align': 'end',
                       'color': '#aaaaaa'
                     }
@@ -71,6 +72,7 @@
                 {
                   'type': 'box',
                   'layout': 'vertical',
+                  'margin': 'xs',
                   'contents': [
                     {
                       'type': 'box',
@@ -84,7 +86,7 @@
                         },
                         {
                           'type': 'text',
-                          'text': data[2],
+                          'text': data[1],
                           'align': 'end'
                         }
                       ]
@@ -92,6 +94,7 @@
                     {
                       'type': 'box',
                       'layout': 'horizontal',
+                      'margin': 'sm',
                       'contents': [
                         {
                           'type': 'text',
@@ -108,12 +111,12 @@
                             'uri': 'tel:0' + data[8]
                           }
                         }
-                      ],
-                      'margin': 'sm'
-                     },
+                      ]
+                    },
                     {
                       'type': 'box',
                       'layout': 'horizontal',
+                      'margin': 'sm',
                       'contents': [
                         {
                           'type': 'text',
@@ -131,11 +134,9 @@
                             'uri': 'https://maps.google.com?q=' + data[6] + ',' + data[7]
                           }
                         }
-                      ],
-                      'margin': 'sm'
+                      ]                      
                     }
-                  ],
-                  'margin': 'xs'
+                  ]
                 },
                 {
                   'type': 'separator',
@@ -144,6 +145,7 @@
                 {
                   'type': 'box',
                   'layout': 'vertical',
+                  'margin': 'md',
                   'contents': [
                     {
                       'type': 'box',
@@ -166,6 +168,12 @@
                     {
                       'type': 'box',
                       'layout': 'horizontal',
+                      'margin': 'sm',
+                      'action': {
+                        'type': 'uri',
+                        'label': 'action',
+                        'uri': 'https://lh3.googleusercontent.com/d/' + data[4] + '=w1280?authuser=0'
+                      },
                       'contents': [
                         {
                           'type': 'image',
@@ -174,24 +182,11 @@
                           'aspectMode': 'cover',
                           'aspectRatio': '1.5:1'
                         }
-                      ],
-                      'margin': 'sm',
-                      'action': {
-                        'type': 'uri',
-                        'label': 'action',
-                        'uri': 'https://lh3.googleusercontent.com/d/' + data[4] + '=w1280?authuser=0'
-                      }
+                      ]
                     }
-                  ],
-                  'margin': 'md'
-                },
-                {
-                  'type': 'box',
-                  'layout': 'vertical',
-                  'contents': []
+                  ]                  
                 }
-              ],
-              'paddingAll': 'xl'
+              ]
             },
             'footer': {
               'type': 'box',
@@ -206,7 +201,7 @@
                       'action': {
                         'type': 'uri',
                         'label': 'รับเรื่อง',
-                        'uri': 'https://line.me/R/oaMessage/@854yltdu/?%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A2%20%23' + data[0]
+                        'uri': 'https://line.me/R/oaMessage/@854yltdu/?%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A2%20%23' + (data[14] - 1)
                       },
                       'style': 'primary',
                       'height': 'sm',
@@ -238,9 +233,7 @@
             }
           }
 
-
         }
-
 
 
       ])
