@@ -4,7 +4,7 @@
 <head>
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover'>
-  <title>v1</title>
+  <title>v2</title>
 </head>
 
 <body>
@@ -27,6 +27,7 @@
       const myurl = window.location.search.slice(1)
       const query = decodeURIComponent(myurl).replace(/\+/g, ' ')
       const data = query.split(',')
+      data[14] = data[14] - 1
       alert(data)
       alert(data[14])
 
@@ -57,7 +58,7 @@
                     },
                     {
                       'type': 'text',
-                      'text': '#' + (data[14] - 1),
+                      'text': '#' + data[14],
                       'align': 'end',
                       'color': '#aaaaaa'
                     }
@@ -135,13 +136,13 @@
                             'uri': 'https://maps.google.com?q=' + data[6] + ',' + data[7]
                           }
                         }
-                      ]                      
+                      ]
                     }
                   ]
                 },
                 {
                   'type': 'separator',
-                  'margin': 'sm'
+                  'margin': 'md'
                 },
                 {
                   'type': 'box',
@@ -185,7 +186,7 @@
                         }
                       ]
                     }
-                  ]                  
+                  ]
                 }
               ]
             },
@@ -202,7 +203,7 @@
                       'action': {
                         'type': 'uri',
                         'label': 'รับเรื่อง',
-                        'uri': 'https://line.me/R/oaMessage/@854yltdu/?%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A2%20%23' + (data[14] - 1)
+                        'uri': 'https://line.me/R/oaMessage/@854yltdu/?%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A2%20%23' + data[14]
                       },
                       'style': 'primary',
                       'height': 'sm',
