@@ -27,7 +27,8 @@
       const myurl = window.location.search.slice(1)
       const query = decodeURIComponent(myurl).replace(/\+/g, ' ')
       const data = query.split(',')
-      // alert(data[14])
+      alert(data)
+      alert(data[14])
 
       await liff.shareTargetPicker([
 
